@@ -13,6 +13,7 @@ The main library requirements for this projects are as follows
 * **Tensorflow**
 * **Matplotlib**
 * **Opencv**
+
 The complete requirements can be installed using the following set of commands 
 
 ```
