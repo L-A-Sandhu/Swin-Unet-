@@ -1,17 +1,29 @@
 # kvasir-sessile
-In this work we have used swin-net transformer for sementic segmentation of Polyp Dataset for Computer Aided Gastrointestinal Disease Detection.
+In this work swin-net transformer is used for sementic segmentation of Polyp Dataset for Computer Aided Gastrointestinal Disease Detection.
 The data set can be downloaded from the link given below 
 ```
 https://datasets.simula.no/kvasir-seg/
 ```
+The rest of the repo. is divided as follows
+1. Requirements 
+2. Traning and Inference 
+3. Results 
+## Requirements
+The main library requirements for this projects are as follows 
+* **Tensorflow**
+* **Matplotlib**
+* **Opencv**
+The complete requirements can be installed using the following set of commands 
+
+```
+cd kvasir-sessile/
+conda create  -n <environment -name> python==3.7.4
+conda activate <environment-name>
+pip install -r requirements.txt
+```
 
 ## Traning and Inference
-Before traning the model or performing inference create a conda  environment with the **python=3.7**  and then inside the environment install the  ** requirement.txt** using the the following command 
 
-```
-
-pip install -r requirement.txt
-```
 The traning and inference code is given inside the **Swin_UNET_128.ipynb**
 
 
