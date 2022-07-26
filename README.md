@@ -37,15 +37,35 @@ Please follow the following set of commands
 
 ### Train
 ```
+python Swin_UNET_128.py  --data=<data set path>--class=< number of classes>  --inps= < Train, test, Resume>  --b_s=< batch size> --e=< Epoch> --p= < patience>  --model_dir= < Check_Point>
+Example Command
+python Swin_UNET_128.py  --data=./data --class=2 --inps=train --b_s=16 --e=10 --p=10 --model_dir='./checkpoint/'
+
+
+
 ```
 ### Test
 ```
+python Swin_UNET_128.py  --data=<data> --class=< number of classes>  --inps= < train, test, resume> --model_dir='./checkpoint/'
+Example Command
+python Swin_UNET_128.py  --data=./data --class=2 --inps=test --model_dir='./checkpoint/'
+
 ```
 ### Resume 
 ```
+python Swin_UNET_128.py  --data=<data set path>--class=< number of classes>  --inps= < Train, test, Resume>  --b_s=< batch size> --e=< Epoch> --p= < patience>  --model_dir= < Check_Point>
+
+Example Command
+
+python Swin_UNET_128.py  --data=./data --class=2 --inps=resume --b_s=16 --e=10 --p=10 --model_dir='./checkpoint/'
+
 ```
 ### Infer
 ```
+python Swin_UNET_128.py  --data=< data for infrence > --class=2 --inps=< test, train, resume, infer> --model_dir=< checkp point>
+
+python Swin_UNET_128.py  --data=./data --class=2 --inps=infer --model_dir='./checkpoint/'
+
 ```
 
 
@@ -55,6 +75,8 @@ The prediction accuracy, latency , Flops, size on disk and the number  of parame
 | Model         | Parameters | Accuracy | Latency(sec)   | Size on Disk (MB)| Flops |
 |---------------|-------------|----------|----------------|------------------|-------|
 | Swin-unet     | 3,783,510   | 0.836    |  0.0004        |        38.89     |0.681 G|
+
+
 The visual results of this work are shown in the following figure where first column shows the  ground truth sample images. The second coulmn shows their respective predictions . The third coulmn shows the error. between the predicted and the ground truth. 
 
 ![Alt text](./Results.png?raw=true "Title")
