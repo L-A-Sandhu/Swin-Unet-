@@ -78,6 +78,5 @@ The prediction accuracy, latency , Flops, size on disk and the number  of parame
 
 
 The visual results of this work are shown in the following figure where first column shows the  ground truth sample images. The second coulmn shows their respective predictions . The third coulmn shows the error. between the predicted and the ground truth. 
-
 ![Alt text](./Results.png?raw=true "Title")
 
