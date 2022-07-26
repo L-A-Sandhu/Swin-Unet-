@@ -27,7 +27,7 @@ pip install -r requirements.txt
 ## Data Prepration 
 Download the data from * "https://datasets.simula.no/kvasir-seg/" and extract the data folder. Make a folder name "data" inside Swin-unet folder and copy images and mask from kvasir-seg folder inside data folder then run the following commands.
 ```
-python 
+python preprocess.py
 
 ```
 This code  will preprocess data and convert it in to png mask folder with the name " masks_png".
