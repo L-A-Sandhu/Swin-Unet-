@@ -1,9 +1,11 @@
-# Swin-Unet
-In this work swin-net transformer is used for sementic segmentation of Polyp Dataset for Computer Aided Gastrointestinal Disease Detection.
-The data set can be downloaded from the link given below 
-```
-https://datasets.simula.no/kvasir-seg/
-```
+# Swin-Unet: Semantic Segmentation for Polyp Detection Using Transformer Models
+
+This repository implements **Swin-Unet**, a powerful transformer-based architecture used for **semantic segmentation** of the **Kvasir Polyp Dataset**. The project aims to support **Computer-Aided Gastrointestinal Disease Detection** by accurately identifying and segmenting polyps in endoscopic images.
+
+## Dataset
+You can download the **Kvasir-SEG dataset** used in this project from the following link:  
+[Kvasir-SEG Polyp Dataset](https://datasets.simula.no/kvasir-seg/)
+
 The rest of the repo. is divided as follows
 1. Requirements
 2.  Data Prepration
@@ -11,26 +13,46 @@ The rest of the repo. is divided as follows
 4. Results 
 
 ## Requirements
-The main library requirements for this projects are as follows 
-* **Tensorflow**
-* **Matplotlib**
-* **Opencv**
 
-The complete requirements can be installed using the following set of commands 
+To run the **Swin-Unet** model for polyp detection and segmentation, you need to install the following main libraries:
 
-```
+- **TensorFlow**: For building and training the Swin-Unet transformer model.
+- **Matplotlib**: For visualizing results and plotting data.
+- **OpenCV**: For image processing tasks, including reading and preparing the dataset.
+
+### Installation Instructions:
+
+Follow these steps to set up the environment and install all dependencies:
+
+1. **Clone the repository**:
+   ```bash
 cd Swin-unet/
 conda create  -n <environment -name> python==3.7.4
 conda activate <environment-name>
 pip install -r requirements.txt
 ```
-## Data Prepration 
-Download the data from * "https://datasets.simula.no/kvasir-seg/" and extract the data folder. Make a folder name "data" inside Swin-unet folder and copy images and mask from kvasir-seg folder inside data folder then run the following commands.
-```
-python preprocess.py
+## Data Preparation
 
-```
-This code  will preprocess data and convert it in to png mask folder with the name " masks_png".
+Before training the **Swin-Unet** model for **polyp segmentation**, you need to prepare the dataset.
+
+### Steps to Prepare the Data:
+
+1. **Download the Kvasir-SEG Dataset**:  
+   Download the dataset from the following link:  
+   [Kvasir-SEG Dataset](https://datasets.simula.no/kvasir-seg/)
+
+2. **Extract the Data**:  
+   After downloading, extract the dataset to your local machine.
+
+3. **Organize the Files**:
+   - Create a new folder called `data` inside the `Swin-unet` project directory.
+   - Copy the images and masks from the **Kvasir-SEG** dataset into the `data` folder.
+
+4. **Run Preprocessing**:  
+   Use the following command to preprocess the dataset and convert the masks into PNG format:
+   ```bash
+   python preprocess.py
+
 ## Training and Inferene 
 This work genrates a swin-unet model from scratch. However, it can save checkpoint, resume traning , test on data and perform infrence on a dataset.
 Please follow the following set of commands 
